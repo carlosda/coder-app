@@ -19,7 +19,7 @@ function ItemCount(props) {
     function incrementaContador() {
 	setContador(contador+1);
         setDecButton(false);
-        if (contador === parseInt(props.stock)) {
+        if (contador == parseInt(props.stock)) {
             setIncButton(true);
 
         }
@@ -31,7 +31,7 @@ function ItemCount(props) {
         setContador(contador-1);
         setIncButton(false);
 	
-	if (contador === parseInt(props.initial)) { 
+	if (contador == parseInt(props.initial)) { 
 	  setDecButton(true);
 
         }      

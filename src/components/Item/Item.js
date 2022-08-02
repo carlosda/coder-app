@@ -3,7 +3,7 @@ import ItemCount from '../ItemCount/ItemCount.js';
 
 function Item() {
 
-  function onAdd () {
+  const onAdd = () => {
       console.log('Item agregado');
 
      return;
