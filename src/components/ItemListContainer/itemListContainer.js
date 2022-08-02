@@ -1,10 +1,11 @@
 import './itemListContainer.css'
 
-function ItemListContainer() {
+
+function ItemListContainer(props) {
     return (
         <>
-            <div>
-                <p> Esto es el componente ItemListContainer </p>
+            <div>                
+		{props.children}
             </div>
         </>
     );
