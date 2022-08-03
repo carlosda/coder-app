@@ -25,12 +25,18 @@ function App() {
       <ItemListContainer>
 
         {data.map((prod) => {
+
           return(
-            <item key={prod.id} img={prod.foto} color={pro.color} tipo={prod.tipo} stock={prod.stock} talle={prod.talle} ></item> 
+            <Item key={prod.id} 
+                  img={prod.foto}
+                  color={prod.color}
+                  tipo={prod.tipo}
+                  stock={prod.stock}
+                  talle={prod.talle}
+                  precio={prod.precio}
+                  foto={prod.foto} ></Item> 
           );
         })}
-
-        <Item></Item>
       </ItemListContainer>
     </div>
   );

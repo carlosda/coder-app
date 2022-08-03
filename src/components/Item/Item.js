@@ -1,24 +1,24 @@
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount.js';
 
-function Item() {
+function Item(props) {
 
   const onAdd = () => {
       console.log('Item agregado');
 
      return;
   }
-
-
+  
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={props.foto} width="100px" height="180"/>
       <Card.Body>
-        <Card.Title>Remera Fashion</Card.Title>
+        <Card.Title>{props.tipo}</Card.Title>
         <Card.Text>
-          $1500
+          ${props.precio}
         </Card.Text>
-        <ItemCount stock="5" initial="1" callback={onAdd} ></ItemCount>
+        <p>{props.color},{props.talle}</p>
+        <ItemCount stock={props.stock} initial="1" callback={onAdd} ></ItemCount>
       </Card.Body>
     </Card>
   );

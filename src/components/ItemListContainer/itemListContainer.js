@@ -4,8 +4,8 @@ import './itemListContainer.css'
 function ItemListContainer(props) {
     return (
         <>
-            <div>                
-		{props.children}
+            <div className='ItemlistContainer'>
+                {props.children}
             </div>
         </>
     );
