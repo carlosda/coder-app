@@ -1,0 +1,12 @@
+.ItemDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.ItemDetail img {
+    padding: 25px;
+    width: 200px;
+    height: auto;
+}

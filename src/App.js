@@ -1,7 +1,8 @@
 import './App.css';
 import Menu from './components/menu/menu.js';
 import ItemListContainer from './components/ItemListContainer/itemListContainer.js';
-import ItemList from './components/ItemList/ItemList';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.js';
+
 
 
 function App() {
@@ -11,11 +12,8 @@ function App() {
       <header className="App-header">
         <Menu></Menu>
       </header>
-      <ItemListContainer>
-
-        <ItemList></ItemList>
- 
-      </ItemListContainer>
+      <ItemListContainer></ItemListContainer>
+      <ItemDetailContainer></ItemDetailContainer>
     </div>
   );
 }
