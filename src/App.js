@@ -1,6 +1,6 @@
 import './App.css';
 import Menu from './components/menu/menu.js';
-import {Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Products from './pages/Products';
 
 //import ItemListContainer from './components/ItemListContainer/itemListContainer.js';
@@ -9,7 +9,7 @@ import Products from './pages/Products';
 
 
 function App() {
- 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,10 +17,11 @@ function App() {
       </header>
 
       <Routes>
-	<Route path = '/' element={<Products/>} />	
+        <Route path='/' element={<Products />} />
+        <Route path='/product/:idProduct' element={<ProductsDetail />} />
       </Routes>
 
-      { /*<ItemListContainer></ItemListContainer> */ }
+      { /*<ItemListContainer></ItemListContainer> */}
       { /*<ItemDetailContainer></ItemDetailContainer>*/}
     </div>
   );

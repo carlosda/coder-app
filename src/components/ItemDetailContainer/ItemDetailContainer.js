@@ -1,20 +1,23 @@
 import {useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom';
 import './ItemDetailContainer.css';
 import ItemDetail from '../ItemDetail/ItemDetail.js';
 import DataApi from '../../data/data.js';
 
 
-function ItemDetailContainer(props) {
+function ItemDetailContainer() {
 
+    const {idProduct} = useParams(); 
     const [data, setData] = useState([]);
-    const id = 2;
     
-
+    
     useEffect(() => {
-        DataApi.getDetailProd(id).then((resp) => setData(resp))
+        
+        DataApi.getDetailProd(idProduct).then((resp) => setData(resp))
             .catch((error) => console.log(error))
-            .finally(console.log('Lectura datos finalizada'));        
-    }, []);
+            .finally(console.log('Lectura datos finalizada'));     
+       
+        }, [idProduct]);
 
 
     return (

@@ -1,12 +1,11 @@
 import ItemListContainer from '../components/ItemListContainer/itemListContainer.js';
 
-export default function Products () {
+export default function Products() {
 
-	return {
+	return (
 
 		<div>
-			<ItemListContainer/>
-
+			<ItemListContainer />
 		</div>
-	}
-}
+	);
+};
