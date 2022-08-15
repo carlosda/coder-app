@@ -1,7 +1,10 @@
 import './App.css';
 import Menu from './components/menu/menu.js';
-import ItemListContainer from './components/ItemListContainer/itemListContainer.js';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.js';
+import {Routes, Route } from 'react-router-dom';
+import Products from './pages/Products';
+
+//import ItemListContainer from './components/ItemListContainer/itemListContainer.js';
+//import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.js';
 
 
 
@@ -12,8 +15,13 @@ function App() {
       <header className="App-header">
         <Menu></Menu>
       </header>
-      <ItemListContainer></ItemListContainer>
-      <ItemDetailContainer></ItemDetailContainer>
+
+      <Routes>
+	<Route path = '/' element={<Products/>} />	
+      </Routes>
+
+      { /*<ItemListContainer></ItemListContainer> */ }
+      { /*<ItemDetailContainer></ItemDetailContainer>*/}
     </div>
   );
 }
