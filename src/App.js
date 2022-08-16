@@ -3,6 +3,8 @@ import Menu from './components/menu/menu.js';
 import { Routes, Route } from 'react-router-dom';
 import Products from './pages/Products';
 import ProductsDetail from './pages/ProductsDetail';
+import Cart from './pages/Cart';
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Products />} />
         <Route path='/product/:idProduct' element={<ProductsDetail />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
       
     </div>
