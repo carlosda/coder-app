@@ -1,25 +1,18 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import './ItemCount.css'
 
 function ItemCount(props) {
 	
-    const [contador, setContador] = useState(0);
-    const [decButton, setDecButton] = useState(1);
-    const [incButton, setIncButton] = useState(1);
+    const [contador, setContador] = useState(parseInt(props.initial));
+    const [decButton, setDecButton] = useState(true);
+    const [incButton, setIncButton] = useState(false);
 
-    useEffect(() => {
-       setContador(parseInt(props.initial));
-       setDecButton(true);
-       setIncButton(false);
-
-      return () => { }
-    },[props.initial]);
 
     function incrementaContador() {
 	setContador(contador+1);
         setDecButton(false);
-        if (contador == parseInt(props.stock)) {
+        if (contador === parseInt(props.stock)) {
             setIncButton(true);
 
         }
@@ -31,7 +24,7 @@ function ItemCount(props) {
         setContador(contador-1);
         setIncButton(false);
 	
-	if (contador == parseInt(props.initial)) { 
+	if (contador === parseInt(props.initial)) { 
 	  setDecButton(true);
 
         }      
