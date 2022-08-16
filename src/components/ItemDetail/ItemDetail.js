@@ -7,7 +7,9 @@ import ItemCount from '../ItemCount/ItemCount';
 
 function ItemDetail(props) {
 
+    const navigateFn = useNavigate();
     const [data, setData] = useState([]);
+    const [cart, setCart] = useState(false);
 
     const InputCount = () => {
         return (
@@ -24,6 +26,7 @@ function ItemDetail(props) {
 
     const onAdd = (quantity) => {
         setData(quantity);
+        setCart(true);
         console.log(data);
     };
 
@@ -33,6 +36,8 @@ function ItemDetail(props) {
 
 
     function render() {
+
+        const DetailAction  = cart === false ?  InputCount  : toCart;
         return (
             <Card>
                 <Card.Header>Detalle Producto</Card.Header>
@@ -50,9 +55,8 @@ function ItemDetail(props) {
                         </div>
 
                     </div>
-
-                    {InputCount()}
-                    {toCart()}
+		
+		    <DetailAction></DetailAction>
 
                 </Card.Body>
             </Card>
