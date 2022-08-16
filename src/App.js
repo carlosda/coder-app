@@ -2,10 +2,7 @@ import './App.css';
 import Menu from './components/menu/menu.js';
 import { Routes, Route } from 'react-router-dom';
 import Products from './pages/Products';
-
-//import ItemListContainer from './components/ItemListContainer/itemListContainer.js';
-//import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.js';
-
+import ProductsDetail from './pages/ProductsDetail';
 
 
 function App() {
@@ -20,9 +17,7 @@ function App() {
         <Route path='/' element={<Products />} />
         <Route path='/product/:idProduct' element={<ProductsDetail />} />
       </Routes>
-
-      { /*<ItemListContainer></ItemListContainer> */}
-      { /*<ItemDetailContainer></ItemDetailContainer>*/}
+      
     </div>
   );
 }

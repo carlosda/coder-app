@@ -53,8 +53,9 @@ class DataApi {
             let condition = true;
 
             if (condition) {
-                setTimeout(() => {
-                    res(this.Data[id]);
+                setTimeout(() => {                    
+                    const item = this.Data.find(item => item.id === parseInt(id));
+		    res(item);
                 }, 2000);
             } else {
                 rej("no hay productos");
