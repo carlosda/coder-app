@@ -38,6 +38,12 @@ function ItemCount(props) {
 
 
     }
+
+    function callBackFunc() {
+
+        props.callback(contador);
+
+    }
 	
 	
     return (
@@ -51,7 +57,7 @@ function ItemCount(props) {
 			<Button variant="primary" onClick={incrementaContador} disabled={incButton} >+</Button>
 		</div>
 
-		<Button variant="primary"onClick={props.callback}>Agregar al carrito</Button>		
+		<Button variant="primary"onClick={callBackFunc}>Agregar al carrito</Button>		
 
             </div>
 

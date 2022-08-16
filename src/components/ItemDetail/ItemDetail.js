@@ -1,7 +1,17 @@
+import {useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import './ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount';
 
 function ItemDetail(props) {
+
+    const [data, setData] = useState([]);
+
+
+    const onAdd = (quantity) => {
+        setData(quantity);
+        console.log(data);
+    };
 
 
     function render() {
@@ -24,9 +34,13 @@ function ItemDetail(props) {
 
                         </div>
 
+                        <ItemCount stock={props.stock} initial="1" callback={onAdd} ></ItemCount>
 
 
-                    </div>                 
+
+                    </div>    
+
+
 
                 </Card.Body>
             </Card>
